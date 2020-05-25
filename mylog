@@ -1,0 +1,47 @@
+2020-04-26 03:00:16.903  INFO 31424 --- [main] com.own.SpringWebMvcApplication          : Starting SpringWebMvcApplication on sysadmin-radhe with PID 31424 (/home/local/NPST/radhe.shyam/Radhey/works/Spring-Web-Mvc/target/classes started by NPST\radhe.shyam in /home/local/NPST/radhe.shyam/Radhey/works/Spring-Web-Mvc)
+2020-04-26 03:00:16.909  INFO 31424 --- [main] com.own.SpringWebMvcApplication          : No active profile set, falling back to default profiles: default
+2020-04-26 03:00:18.184  INFO 31424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-26 03:00:18.285  INFO 31424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86ms. Found 1 JPA repository interfaces.
+2020-04-26 03:00:19.047  INFO 31424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9990 (http)
+2020-04-26 03:00:19.059  INFO 31424 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-26 03:00:19.059  INFO 31424 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-26 03:00:19.382  INFO 31424 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-04-26 03:00:19.387  INFO 31424 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-26 03:00:19.388  INFO 31424 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2338 ms
+2020-04-26 03:00:19.687  INFO 31424 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-26 03:00:19.766  INFO 31424 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-26 03:00:19.925  INFO 31424 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-26 03:00:20.056  INFO 31424 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-26 03:00:20.445  INFO 31424 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-26 03:00:20.465  INFO 31424 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-04-26 03:00:21.858  INFO 31424 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-26 03:00:21.874  INFO 31424 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-26 03:00:21.951  WARN 31424 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-26 03:00:23.207  INFO 31424 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-26 03:00:23.374  INFO 31424 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7962a364, org.springframework.security.web.context.SecurityContextPersistenceFilter@439b0198, org.springframework.security.web.header.HeaderWriterFilter@34766f4b, org.springframework.security.web.csrf.CsrfFilter@3e7da4cb, org.springframework.security.web.authentication.logout.LogoutFilter@18d63996, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4fe9fb65, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@a165c11, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@756030e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c4e11d0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@220d7eb7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@134ec0f3, org.springframework.security.web.session.SessionManagementFilter@6600d07d, org.springframework.security.web.access.ExceptionTranslationFilter@2f408960, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@684eb4a0]
+2020-04-26 03:00:23.518  INFO 31424 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-26 03:00:23.731  INFO 31424 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-26 03:00:23.754  INFO 31424 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-26 03:00:23.789  INFO 31424 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-26 03:00:24.072  INFO 31424 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-04-26 03:00:24.080  INFO 31424 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-04-26 03:00:24.087 ERROR 31424 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9990 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9990 or configure this application to listen on another port.
+
+2020-04-26 03:00:24.091  INFO 31424 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-26 03:00:24.096  INFO 31424 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-26 03:00:24.100  INFO 31424 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-26 03:00:24.117  INFO 31424 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

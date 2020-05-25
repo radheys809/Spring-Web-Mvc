@@ -1,0 +1,31 @@
+{
+  "groups": [
+    {
+      "name": "file",
+      "type": "com.own.configuration.FileUploadProperties",
+      "sourceType": "com.own.configuration.FileUploadProperties",
+      "description":"file uplaoad url and there related information."
+    }
+    
+  ],
+  "properties": [
+    {
+      "name": "file.upload-dir",
+      "type": "java.lang.String",
+      "description": " provide the full location of file upload or choode from the hints."
+    }
+  ],
+  "hints": [{
+    "name": "file.upload-dir",
+    "values": [
+    {
+      "value": "/home/local/NPST/radhe.shyam/Radhey/works/upload/",
+      "description": "upload location for specific location."
+    },
+    {
+      "value": "/Spring-Web-Mvc/upload/",
+      "description": "class path."
+    }
+    ]
+  }]
+}

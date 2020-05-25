@@ -1,0 +1,85 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT project (modelVersion,parent,groupId,artifactId,version,
+                   packaging,name,description,properties,dependencies,
+                   build)>
+<!ATTLIST project
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'
+  xmlns:xsi CDATA #FIXED 'http://www.w3.org/2001/XMLSchema-instance'
+  xsi:schemaLocation CDATA #REQUIRED>
+
+<!ELEMENT modelVersion (#PCDATA)>
+<!ATTLIST modelVersion
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT parent (groupId,artifactId,version,relativePath)>
+<!ATTLIST parent
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT packaging (#PCDATA)>
+<!ATTLIST packaging
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT description (#PCDATA)>
+<!ATTLIST description
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT properties (java.version)>
+<!ATTLIST properties
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT dependencies (dependency)+>
+<!ATTLIST dependencies
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT build (plugins)>
+<!ATTLIST build
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT relativePath EMPTY>
+<!ATTLIST relativePath
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT java.version (#PCDATA)>
+<!ATTLIST java.version
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT dependency (groupId,artifactId,version?,scope?,exclusions?)>
+<!ATTLIST dependency
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT plugins (plugin)>
+<!ATTLIST plugins
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT scope (#PCDATA)>
+<!ATTLIST scope
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT exclusions (exclusion)>
+<!ATTLIST exclusions
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT plugin (groupId,artifactId)>
+<!ATTLIST plugin
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT exclusion (groupId,artifactId)>
+<!ATTLIST exclusion
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT groupId (#PCDATA)>
+<!ATTLIST groupId
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT artifactId (#PCDATA)>
+<!ATTLIST artifactId
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>
+
+<!ELEMENT version (#PCDATA)>
+<!ATTLIST version
+  xmlns CDATA #FIXED 'http://maven.apache.org/POM/4.0.0'>

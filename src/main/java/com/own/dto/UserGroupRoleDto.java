@@ -8,10 +8,10 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 public class UserGroupRoleDto {
-	private String name;
-	private String password;
-	private boolean enabled;
-	private String type;
-	private String roleName;
-	
+    private String name;
+    private String password;
+    private boolean enabled;
+    private String type;
+    private String roleName;
+
 }

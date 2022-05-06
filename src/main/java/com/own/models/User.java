@@ -24,34 +24,35 @@ import java.util.Set;
 //
 //})
 @Builder
-public class User implements Serializable{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -7575996264107317483L;
-	@Id
-	@GeneratedValue(strategy =  GenerationType.AUTO)
-	@Column(updatable = false)
-	private Long userId;
-	private String name;
-	@Size(max = 35)
-	private String email;
-	@Size(max = 13)
-	private String mobile;
-	private String country;
-	private String password;
-	@Size(max = 8,min = 6)
-	private String passHas;
-	private boolean enabled;
-	private Long groupId;
-	
-	@ManyToMany
-	@JoinTable(name = "User_Blocked",
-	joinColumns = {@JoinColumn(name="blockId",
-	referencedColumnName = "userId")}, 
-		inverseJoinColumns = {
-				 @JoinColumn(name="userId",
-						 referencedColumnName = "blockId") } )
-	private Set<BlockedOperations>blockedOperations=new HashSet<BlockedOperations>();;
-	
+public class User implements Serializable {
+    /**
+     *
+     */
+    private static final long serialVersionUID = -7575996264107317483L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(updatable = false)
+    private Long userId;
+    private String name;
+    @Size(max = 35)
+    private String email;
+    @Size(max = 13)
+    private String mobile;
+    private String country;
+    private String password;
+    @Size(max = 8, min = 6)
+    private String passHas;
+    private boolean enabled;
+    private Long groupId;
+
+    @ManyToMany
+    @JoinTable(name = "User_Blocked",
+            joinColumns = {@JoinColumn(name = "blockId",
+                    referencedColumnName = "userId")},
+            inverseJoinColumns = {
+                    @JoinColumn(name = "userId",
+                            referencedColumnName = "blockId")})
+    private Set<BlockedOperations> blockedOperations = new HashSet<BlockedOperations>();
+    ;
+
 }

@@ -7,11 +7,12 @@ import org.bouncycastle.crypto.modes.CBCBlockCipher;
 import org.bouncycastle.crypto.paddings.PaddedBufferedBlockCipher;
 import org.bouncycastle.crypto.params.KeyParameter;
 import org.springframework.stereotype.Component;
+
 @Component
 public class FileEncryption {
-	public static final String PRIVATE_SEC_KEY="aef-ASE5";
-	
-	BlockCipher engine = new DESEngine();
+    public static final String PRIVATE_SEC_KEY = "aef-ASE5";
+
+    BlockCipher engine = new DESEngine();
 
     private byte[] Encrypt(String keys, byte[] plainText) {
         byte[] key = keys.getBytes();
@@ -41,11 +42,13 @@ public class FileEncryption {
         }
         return rv;
     }
-    public   byte [] encrypt(String keys, byte[] plainBytes) {
-    	return Encrypt(keys, plainBytes);
+
+    public byte[] encrypt(String keys, byte[] plainBytes) {
+        return Encrypt(keys, plainBytes);
     }
-    public   byte [] decrypt(String keys, byte[] encryptedBytes) {
-    	return Decrypt(keys, encryptedBytes);
+
+    public byte[] decrypt(String keys, byte[] encryptedBytes) {
+        return Decrypt(keys, encryptedBytes);
     }
 
 }

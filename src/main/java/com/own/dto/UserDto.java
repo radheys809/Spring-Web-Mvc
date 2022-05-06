@@ -10,20 +10,21 @@ import lombok.*;
 @Getter
 @Builder
 public class UserDto {
-	private Long userId;
-	private String name;
-	private String email;
-	private String mobile;
-	@JsonPropertyDescription(value = "includes the Json description")
-	@JsonProperty("country-Name")
-	private String country;
-	private boolean enabled;
-	public UserDto(Long userId, String name, String email, String mobile, String country) {
-		this.userId = userId;
-		this.name = name;
-		this.email = email;
-		this.mobile = mobile;
-		this.country = country;
-	}
-	
+    private Long userId;
+    private String name;
+    private String email;
+    private String mobile;
+    @JsonPropertyDescription(value = "includes the Json description")
+    @JsonProperty("country-Name")
+    private String country;
+    private boolean enabled;
+
+    public UserDto(Long userId, String name, String email, String mobile, String country) {
+        this.userId = userId;
+        this.name = name;
+        this.email = email;
+        this.mobile = mobile;
+        this.country = country;
+    }
+
 }

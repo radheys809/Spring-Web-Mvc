@@ -21,42 +21,43 @@ import java.util.List;
 import java.util.Optional;
 
 @SpringBootApplication
-@EnableConfigurationProperties(value = { FileUploadProperties.class, SwaggerConfigProperties.class })
+@EnableConfigurationProperties(value = {FileUploadProperties.class, SwaggerConfigProperties.class})
 @EnableCaching
 @EnableAspectJAutoProxy
 public class SpringWebMvcApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringWebMvcApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringWebMvcApplication.class, args);
+    }
 
-	@Autowired
-	UserRepo userRepo;
-	@Autowired GroupRepository groupRepo;
+    @Autowired
+    UserRepo userRepo;
+    @Autowired
+    GroupRepository groupRepo;
 
-	@Bean
-	CommandLineRunner commandLineRunner() {
-		userRepo.deleteAll();
-		Optional<Groups> group=groupRepo.findByType("USER");
-		long grupId=1;
-				if (group.isPresent()) {
-					grupId=group.get().getGroupId();
-				}
-		List<User> users = Arrays.asList(
-				User.builder().country("India").email("user1@gmail.com").enabled(true).groupId(grupId).mobile("9621907629").name("Radhe")
-						.password("pass").build(),
-				User.builder().country("India").email("user2@gmail.com").enabled(true).groupId(grupId).mobile("9621907623").name("Shyam")
-						.password("pass").build(),
-				User.builder().country("India").email("user3@gmail.com").enabled(true).groupId(grupId).mobile("9621907624").name("Kush")
-						.password("pass").build(),
-				User.builder().country("India").email("user4@gmail.com").enabled(true).groupId(grupId).mobile("9621907622").name("Lalit")
-						.password("pass").build());
-		users=userRepo.saveAll(users);
-		users.forEach(System.out::println);
-		System.out.println(CacheNames.ALLUSER.Name);
-		System.out.println(CacheNames.GROUPS.name());
-		return null;
+    @Bean
+    CommandLineRunner commandLineRunner() {
+        userRepo.deleteAll();
+        Optional<Groups> group = groupRepo.findByType("USER");
+        long grupId = 1;
+        if (group.isPresent()) {
+            grupId = group.get().getGroupId();
+        }
+        List<User> users = Arrays.asList(
+                User.builder().country("India").email("user1@gmail.com").enabled(true).groupId(grupId).mobile("9621907629").name("Radhe")
+                        .password("pass").build(),
+                User.builder().country("India").email("user2@gmail.com").enabled(true).groupId(grupId).mobile("9621907623").name("Shyam")
+                        .password("pass").build(),
+                User.builder().country("India").email("user3@gmail.com").enabled(true).groupId(grupId).mobile("9621907624").name("Kush")
+                        .password("pass").build(),
+                User.builder().country("India").email("user4@gmail.com").enabled(true).groupId(grupId).mobile("9621907622").name("Lalit")
+                        .password("pass").build());
+        users = userRepo.saveAll(users);
+        users.forEach(System.out::println);
+        System.out.println(CacheNames.ALLUSER.Name);
+        System.out.println(CacheNames.GROUPS.name());
+        return null;
 
-	}
+    }
 
 }

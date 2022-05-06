@@ -14,10 +14,10 @@ import javax.persistence.Id;
 @Setter
 @ToString
 public class Department {
-	@Id
-	@GeneratedValue(strategy =GenerationType.IDENTITY)
-	private Long id;
-	private String deptName;
-	private String post;
-	private String experience;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String deptName;
+    private String post;
+    private String experience;
 }

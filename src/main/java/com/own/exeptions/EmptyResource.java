@@ -2,25 +2,26 @@ package com.own.exeptions;
 
 public final class EmptyResource extends RuntimeException {
 
-	private final String message;
-	private final Integer code;
-	public EmptyResource(String message,Integer code) {
-		super(message);
-		this.message=message;
-		this.code=code;
-	}
+    private final String message;
+    private final Integer code;
 
-	public String getMessage() {
-		return message;
-	}
+    public EmptyResource(String message, Integer code) {
+        super(message);
+        this.message = message;
+        this.code = code;
+    }
 
-	public Integer getCode() {
-		return code;
-	}
+    public String getMessage() {
+        return message;
+    }
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -512715186440325580L;
+    public Integer getCode() {
+        return code;
+    }
+
+    /**
+     *
+     */
+    private static final long serialVersionUID = -512715186440325580L;
 
 }

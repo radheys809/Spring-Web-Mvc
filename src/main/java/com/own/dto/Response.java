@@ -13,8 +13,8 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Response {
-	private Boolean isSuccess;
-	private Object data;
-	private String errorMesaage;
-	private Integer errorCode;
+    private Boolean isSuccess;
+    private Object data;
+    private String errorMesaage;
+    private Integer errorCode;
 }

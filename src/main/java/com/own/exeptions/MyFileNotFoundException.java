@@ -10,15 +10,15 @@ import java.net.MalformedURLException;
 @Getter
 @ResponseStatus(HttpStatus.NOT_FOUND)
 public class MyFileNotFoundException extends Exception {
-	private final String message;
+    private final String message;
 
-	public MyFileNotFoundException(String message) {
-		this.message=message;
-	}
+    public MyFileNotFoundException(String message) {
+        this.message = message;
+    }
 
-	public MyFileNotFoundException(String message, MalformedURLException ex) {
-		super(ex);
-		this.message=message;
-	}
+    public MyFileNotFoundException(String message, MalformedURLException ex) {
+        super(ex);
+        this.message = message;
+    }
 
 }

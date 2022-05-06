@@ -20,44 +20,50 @@ import java.time.LocalDate;
 @EnableSwagger2
 public class AppConfigs {
 
-	@Bean
-	public ModelMapper modelMapper() {
-		
-		return new ModelMapper();
-	}
-	@Bean
+    @Bean
+    public ModelMapper modelMapper() {
+
+        return new ModelMapper();
+    }
+
+    @Bean
     public Docket eDesignApi(SwaggerConfigProperties swaggerConfigProperties) {
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo(swaggerConfigProperties)).
-        		enable(swaggerConfigProperties.isEnabled()).
-        		select().apis(RequestHandlerSelectors.any())
+                enable(swaggerConfigProperties.isEnabled()).
+                select().apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any()).build().pathMapping("/")
                 .directModelSubstitute(LocalDate.class, String.class)
                 .genericModelSubstitutes(ResponseEntity.class).
                 useDefaultResponseMessages(swaggerConfigProperties.isUseDefaultResponseMessages())
                 .enableUrlTemplating(swaggerConfigProperties.isEnableUrlTemplating());
     }
-	@Bean
-	UiConfiguration uiConfig(SwaggerConfigProperties swaggerConfigProperties) {
-		return UiConfigurationBuilder.builder().deepLinking(swaggerConfigProperties.isDeepLinking())
-				.displayOperationId(swaggerConfigProperties.isDisplayOperationId())
-				.defaultModelsExpandDepth(swaggerConfigProperties.getDefaultModelsExpandDepth())
-				.defaultModelExpandDepth(swaggerConfigProperties.getDefaultModelExpandDepth())
-				.defaultModelRendering(ModelRendering.EXAMPLE)
-				.displayRequestDuration(swaggerConfigProperties.isDisplayRequestDuration())
-				.docExpansion(DocExpansion.NONE).filter(Boolean.valueOf(swaggerConfigProperties.isFilter()))
-				.maxDisplayedTags(swaggerConfigProperties.getMaxDisplayedTags())
-				.operationsSorter(OperationsSorter.ALPHA).showExtensions(swaggerConfigProperties.isShowExtensions())
-				.tagsSorter(TagsSorter.ALPHA).supportedSubmitMethods(UiConfiguration.Constants.DEFAULT_SUBMIT_METHODS)
-				.validatorUrl(null).build();
-	}
-	private ApiInfo apiInfo(SwaggerConfigProperties swaggerConfigProperties) {
+
+    @Bean
+    UiConfiguration uiConfig(SwaggerConfigProperties swaggerConfigProperties) {
+        return UiConfigurationBuilder.builder().deepLinking(swaggerConfigProperties.isDeepLinking())
+                .displayOperationId(swaggerConfigProperties.isDisplayOperationId())
+                .defaultModelsExpandDepth(swaggerConfigProperties.getDefaultModelsExpandDepth())
+                .defaultModelExpandDepth(swaggerConfigProperties.getDefaultModelExpandDepth())
+                .defaultModelRendering(ModelRendering.EXAMPLE)
+                .displayRequestDuration(swaggerConfigProperties.isDisplayRequestDuration())
+                .docExpansion(DocExpansion.NONE).filter(Boolean.valueOf(swaggerConfigProperties.isFilter()))
+                .maxDisplayedTags(swaggerConfigProperties.getMaxDisplayedTags())
+                .operationsSorter(OperationsSorter.ALPHA).showExtensions(swaggerConfigProperties.isShowExtensions())
+                .tagsSorter(TagsSorter.ALPHA).supportedSubmitMethods(UiConfiguration.Constants.DEFAULT_SUBMIT_METHODS)
+                .validatorUrl(null).build();
+    }
+
+    private ApiInfo apiInfo(SwaggerConfigProperties swaggerConfigProperties) {
 
         return new ApiInfoBuilder().title(swaggerConfigProperties.getTitle()).description(swaggerConfigProperties.getDescription())
-                                   .version(swaggerConfigProperties.getApiVersion()).build();
-	}
-	
-	
-	  @Bean public ObjectMapper mapper() { return new ObjectMapper(); }
-	 
-	
+                .version(swaggerConfigProperties.getApiVersion()).build();
+    }
+
+
+    @Bean
+    public ObjectMapper mapper() {
+        return new ObjectMapper();
+    }
+
+
 }

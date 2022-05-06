@@ -10,16 +10,17 @@ import javax.validation.constraints.NotNull;
 
 @Getter
 @EqualsAndHashCode
-public final class UserRole implements Role{
+public final class UserRole implements Role {
 
-	private String role;
-	@Override
-	public String getAuthurity() {
-		return role;
-	}
+    private String role;
 
-	public UserRole(@NotNull String role) {
-		Assert.hasText(role, "A granted role textual representation is required");
-		this.role = role;
-	}
+    @Override
+    public String getAuthurity() {
+        return role;
+    }
+
+    public UserRole(@NotNull String role) {
+        Assert.hasText(role, "A granted role textual representation is required");
+        this.role = role;
+    }
 }

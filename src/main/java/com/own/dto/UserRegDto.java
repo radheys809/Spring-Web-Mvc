@@ -10,9 +10,9 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 public class UserRegDto {
-	private String name;
-	private String email;
-	private String password;
-	private String msidn;
-	private String country;
+    private String name;
+    private String email;
+    private String password;
+    private String msidn;
+    private String country;
 }

@@ -11,11 +11,11 @@ import java.time.LocalTime;
 @Table(name = "auth_session")
 @Data
 public class UserSession {
-	@Id
-private Long sessionId;
-private String sessionToken;
-private String authToken;
-private LocalTime crationTime;
-private LocalTime expiryTime;
-private boolean isExpired;
+    @Id
+    private Long sessionId;
+    private String sessionToken;
+    private String authToken;
+    private LocalTime crationTime;
+    private LocalTime expiryTime;
+    private boolean isExpired;
 }

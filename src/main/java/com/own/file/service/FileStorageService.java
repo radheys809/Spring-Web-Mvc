@@ -9,8 +9,8 @@ import java.io.IOException;
 
 public interface FileStorageService {
 
-	String store(MultipartFile file) throws FileStorageException;
+    String store(MultipartFile file) throws FileStorageException;
 
-	Resource loadFileAsResource(String fileName) throws MyFileNotFoundException, IOException;
+    Resource loadFileAsResource(String fileName) throws MyFileNotFoundException, IOException;
 
 }
